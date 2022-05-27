@@ -28,8 +28,25 @@ public class Example2 {
 		if(total%2==1) {
 			System.out.println("»¶");
 		}
+		sc.close();
 		
-
+		/*
+		 * string msg = "";
+		 * int user = sc.nextInt();
+		int f = 1;
+		int total1 = 0 ;
+		do {
+			total1 = total1 = (user*f);
+			f++;
+		}while(f<10);
+		if(total1%2==0) {
+			System.out.println("¬¶");
+		}
+		else {
+			System.out.println("»¶");
+		}
+		sysout > msg ≈ı¿‘
+		*/
 	}
 
 }
