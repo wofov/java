@@ -17,11 +17,11 @@ public class While2 {
          */
 		int a1;
 		for(a1=8;a1>2;a1--) {
-			System.out.printf(a1*7+",");
+			//System.out.printf(a1*7+",");
 		}
 		int a2 = 8;
 		while(a2>2) {
-			System.out.print(a2*7+",");
+			//System.out.print(a2*7+",");
 			a2--;
 		}
 		/*
@@ -33,7 +33,7 @@ public class While2 {
 		int bb;
 		while(c1<8) {
 			bb=1+3*c1;
-			System.out.println(bb);
+			//System.out.println(bb);
 			c1++;
 		}
 		/*
@@ -50,28 +50,25 @@ public class While2 {
 		 */
 		Scanner aa = new Scanner(System.in);
 		int aaa = 100000;
-		int aa3;
+		int aa3 = 0;
 		System.out.println("1번 입력시 입금, 2번 입력시 출금입니다");
 		String dd=aa.next();
+		Scanner aa1 = new Scanner(System.in);
+		int aa2;
 		if(dd.equals("1번")) {
-			Scanner aa1 = new Scanner(System.in);
 			System.out.println("해당 금액을 입력하세요");
-			int aa2 = aa1.nextInt();
+			aa2 = aa1.nextInt();
 			aa3 = aa2 + 100000;
-			System.out.println("총 금액 "+aa3+"원 입니다");
-			
 		}
 		else if(dd.equals("2번")) {
-			Scanner aa1 = new Scanner(System.in);
 			System.out.println("해당 금액을 입력하세요");
-			int aa2 = aa1.nextInt();
+			aa2 = aa1.nextInt();
 			aa3 = 100000 - aa2;
-			System.out.println("총 금액 "+aa3+"원 입니다");
-			
 		}
 		else {
 			System.out.println("다시입력하세요");
 		}
+		System.out.println("총 금액 "+aa3+"원 입니다");
 		aa.close();
 	}
 
