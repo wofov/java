@@ -4,7 +4,7 @@ import java.util.Date;
 public class Double_loop1 {
 
 	public static void main(String[] args) {
-		Date today = new Date();
+	/*	Date today = new Date();
 		System.out.println(today);
 		
 		SimpleDateFormat date = new SimpleDateFormat("YYYY/MM/dd");
@@ -16,7 +16,7 @@ public class Double_loop1 {
 	    int f;
 		for(f=1;f<10;f=f+3) {// 2또는 3씩 증가하는 법
 			System.out.print(f);
-		}
+		}*/
 	
 /*
  3개의 상품
@@ -26,6 +26,16 @@ public class Double_loop1 {
  라는 문구와 함께 해당 할인 숫자를 입력하면
  최종금액이 변경 되어 출력되도록 합니다
  */
+		int f, ff;
+		
+		for(f=1;f<4;f++) {
+			for(ff=1;ff<5;ff++) {
+				System.out.println(f+"+"+ff);
+			}
+		}
+		
+		
+		
 	}
 	int money = 10000;
 	int coupon = 20;

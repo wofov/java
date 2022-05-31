@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array3 {
@@ -41,10 +42,10 @@ public class Array3 {
 		단, "주문종료"라고 입력시 즉시 주문 종료되며,
 		주문내역을 출력.
 		 */
-		String menu[] = {"햄버거","피자","치킨","커피"};
+		/*String menu[] = {"햄버거","피자","치킨","커피"};
 		Scanner sc; 
 		String aa;
-		int b;
+		//int b;
 		String odd = "";
 		for(String a :menu) {
 			System.out.println("주문하고자 하는 메뉴?");
@@ -58,6 +59,35 @@ public class Array3 {
 			}
 		}
 		System.out.println(odd);
+		*/
+		
+		String menus[] = {"햄버거","피자","치킨","커피"};
+		Scanner sc=new Scanner(System.in);//2차 배열부터 for each 못씀
+		String user;
+		String user_menu[] = new String[4];
+		int ct = 0;
+		for(String f : menus) {
+			/*
+			 스캐너가 반복문 안에 적용시 루프로 무조건 반복하지는 않는다.
+			 사용자가 입력할 때 마다 반복문 범위 만큼 출력하는 형태임
+			 */
+			System.out.println("메뉴를 선택해주세요");
+			user = sc.next();
+			if(user.equals("주문종료")) {
+				break;
+			}
+			else {
+				for(String ff : menus) {
+					if(user.equals(ff)) {
+						user_menu[ct] = ff;
+						ct++;
+					}
+				}
+			}
+		}
+		sc.close();
+		System.out.println("주문하신 메뉴는 다음과 같습니다"+ Arrays.toString(user_menu));
+		
 		
 		
 
