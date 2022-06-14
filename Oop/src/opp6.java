@@ -21,7 +21,13 @@ public class opp6 {
 }
 abstract class box{
 	public abstract void dataload(); 
-	
+	//추상화 abstract 코드를 정형화, 개별적인 메소드를 막는, 확장성
+	//캡슐화,은닉화 public private protected 게터 세터
+	//다형성 오버로딩 오버라이드
+	//상속성 재사용 extends , 재사용 -재귀함수 등등
+	/*
+	 
+	 */
 }
 class abox extends box{
 	@Override
