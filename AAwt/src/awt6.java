@@ -12,8 +12,8 @@ public class awt6 {
 
 }
 class gg1 extends awt6_absteact{
-	private String zz;
-	private String zz1;
+	 String zz;
+	 String zz1;
 	public void pp() {
 		
 	}
@@ -32,6 +32,7 @@ class gg1 extends awt6_absteact{
 		int ww=0;
 		while(ww<4) {
 			qq = qq+Integer.toString(aa.get(ww));
+			//String aa = String.valueOf(aa.get(ww));>>이것도 가능
 			ww++;
 		}
 		System.out.println(qq);
