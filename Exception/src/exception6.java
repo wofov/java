@@ -11,23 +11,28 @@ public class exception6 {
 		 */
 		now n = new now();
 		try {
-			int a =45*3+16+5+22*8;
-			System.out.println(a);
-			String a1 = Integer.toString(a);
-			String a4=n.nn(a1);
-			System.out.println(a4);
+			int a =45*3+16+5+22*8+1;
+			String re = n.nn(a);
+			System.out.println(re);
+//			System.out.println(a);
+//			String a1 = Integer.toString(a);
+//			String a4=n.nn(a1);
+//			System.out.println(a4);
 		}catch(Exception e) {
-			System.out.println("짝수라서 오류");
+			if(e.getMessage()!=null) {
+				
+				System.out.println(e.getMessage());
+			}
 		}
 	}
 }
 class now{
 	
-	public String nn(String a2) throws Exception{
-		int a3 = Integer.valueOf(a2);
+	public String nn(int a2) throws Exception{//★★리턴 자료형이 String이더라도 인수값 int 줘도 된다. 
+//		int a3 = Integer.valueOf(a2);
 		String msg;
-		if(a3%2==0) {
-			throw new Exception();
+		if(a2%2==0) {
+			throw new Exception("예외처리 오류 확인");
 		}
 		else {
 			msg="홀수입니다.";

@@ -82,14 +82,14 @@ public class swing6 extends JFrame {
 			public void keyTyped(KeyEvent k) {
 				//입력 값에 대한 자릿수.
 				int i =textField.getText().length();
-				if(i<12){
-					k.consume();
+				if(i>12){
+					k.consume();//>조건 이후 입력하는것을 null로 인식
 				}
-//				System.out.println(k);
-//				System.out.println(k.getKeyChar());
-//				System.out.println(k.getKeyCode());
+				System.out.println(k);
+				System.out.println(k.getKeyChar());
+				System.out.println(k.getKeyCode());
 				int n = Integer.valueOf(k.getKeyChar());//아스키 코드로 변경 
-//				System.out.println(n);
+				System.out.println(n);
 				if(n>=48&&n<=57) {//sysout에서는 정상적인 문자 getKeyChar 보이지만
 					//integer로 변경시 아스키 코드 
 					msg.setText("");

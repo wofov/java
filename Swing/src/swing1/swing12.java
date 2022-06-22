@@ -65,18 +65,18 @@ public class swing12 extends JFrame {
 					swing12.this.count=0;
 				}
 			
-				ImageIcon v = new ImageIcon(url+imgdata[swing12.this.count+1]);
+				ImageIcon v = new ImageIcon(url+imgdata[swing12.this.count]);
 				lb.setIcon(v);
 			}
 		});
 		next.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				swing12.this.count ++;
-				if(swing12.this.count>2) {
-					swing12.this.count = 2;
+				if(swing12.this.count>imgdata.length-1) {
+					swing12.this.count = imgdata.length-1;
 				}
 		
-				ImageIcon v = new ImageIcon(url+imgdata[swing12.this.count+1]);
+				ImageIcon v = new ImageIcon(url+imgdata[swing12.this.count]);
 				lb.setIcon(v);
 			}
 		});
