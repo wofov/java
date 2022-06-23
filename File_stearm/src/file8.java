@@ -12,6 +12,7 @@ public class file8 {
 	     List<String> data=Files.readAllLines(Paths.get("C:\\java5\\File_stearm\\src\\buffer.txt"));
 	     System.out.println(data);
 
+	     System.out.println(data.get(0));
 	    
 	     //List는 최상위 배열 클래스
 	     //Files 신규 IO클래스 입니다. readAllLines 전체 내용을 한번에 모두 읽는다

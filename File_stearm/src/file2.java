@@ -27,6 +27,7 @@ public class file2 {
 			if(e.getMessage()!=null) {
 				System.out.println(e);
 			}
+			
 		}
 
 	}
