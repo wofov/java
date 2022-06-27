@@ -28,6 +28,7 @@ class lo{
 		this.list = new ArrayList<>();
 		try {//파일 로드하면 try catch문 작성해야하는데 알아보기. 
 		this.fr=new FileReader("C:\\java5\\File_stearm\\src\\lotto.txt");
+		
 	    }catch(Exception e) {
 	    	System.out.println(e);
 	    }
