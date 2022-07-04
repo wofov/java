@@ -32,26 +32,44 @@ class chatclient{
 			this.os = this.sk.getOutputStream();
 			this.is = this.sk.getInputStream();
 			this.os.write((mid+"님 접속").getBytes());
+			th ttt = new th(this.is);
+			Thread tt = new Thread(ttt);
+			tt.start();
+			System.out.println("채팅 내용을 입력하세요.");
 			
-			while(true) {
-//				
-				byte data[] = new byte[4096];
-				int n = this.is.read(data);
-				this.result = new String(data,0,n);
-				System.out.println(this.result);
-				
-				System.out.println("채팅 내용을 입력하세요.");
+			while(true) {	
 				String uu = this.sc.nextLine();
 				this.message = mid + " : " + uu;
 				this.os.write(this.message.getBytes());
-				this.os.flush();
-				
+				this.os.flush();				
+//				byte data[] = new byte[4096];
+//				int n = this.is.read(data);
+//				this.result = new String(data,0,n);
+//				System.out.println(this.result);			
 			}
-			
-		}catch(Exception e) {
+		}catch(Exception e) {		
+		}	
+	}
+}
+
+
+class th implements Runnable{
+	InputStream is3 = null;
+	String result = null;
+	public th(InputStream is2) {
+		this.is3 = is2;
+	}
+	public void run() {
+		System.out.println("나출력");
+		try {
+			while(true) {
+				byte data[] = new byte[4096];
+				int n = this.is3.read(data);
+				this.result = new String(data,0,n);
+				System.out.println(this.result);
+			}		
+		}catch(Exception ee) {
 			
 		}
-		
-	}
-	
+	}	
 }
