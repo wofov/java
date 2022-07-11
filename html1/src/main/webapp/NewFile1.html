@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+.box{
+width:350px; height: 115px;
+border:1px solid black;
+border-radius: 10px;
+padding: 15px;
+}
+
+
+.ulcss{
+width:350px; height: 115px;
+list-style:none;
+margin:0px; padding:0px;
+}
+
+.licss{
+width:350px; height: 35px;
+margin-bottom: 5px;
+
+}
+.nomargin{margin-bottom: 0px;}
+.mail1{width:100px; height:35px; float: left;}
+.mail2{width:220px; height:35px; float: left;}
+.pass{width:350px; height:35px;}
+.btn{width:350px; height:35px;}
+.fc{width:30px; height:35px;
+text-align: center; line-height: 35px; float: left;
+}
+
+</style>
+
+</head>
+<!-- 퍼블리싱 작업순서
+1. 전체 아웃라인만 먼저 작업
+2. 각 태그별로 class 사이즈를 정확하게 조절
+3. 태그별로 중복되지 않도록 구성
+4. 각 입력파트를 구현하며, 입력하트에 맞는 class를 적용
+5. 세부적인 사이즈 및 여백 공간을 조절함
+
+ -->
+
+<body>
+<form name="fm" id="fm" method="post" action="./index14.jsp">
+<div class ="box">
+<ul class ="ulcss">
+<li class="licss"><input type="text" name="user_email1" class="mail1">
+<font class="fc">@</font>
+<input type="text" name="user_email2" class="mail2"></li>
+<li class="licss" style="clear:both"><input type="password" name="user_pw" class="pass"></li>
+<li class="licss nomargin"><input type="submit" value="로그인" class="btn"></li>
+
+</ul>
+</div>
+</form>
+
+
+
+</body>
+</html>

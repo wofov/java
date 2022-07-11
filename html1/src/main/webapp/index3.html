@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>1일차 html 2.o 태그 시작</title>
+</head>
+<body>
+<!--  
+<iframe src="./index2.html" frameborder="0" width="100%" height="900" ></iframe>-->
+<!-- iframe : 외부 페이지를 현재 페이지로 load하여 출력하는 태그 입니다
+width=100% : 브라우져 가로크기를 모두 사용한다는 뜻
+ frameborder : iframe시 외곽선을 지울때 사용합니다. 
+ -->
+ <!--  table태그 : 테이블을 생성할때 제작
+ tr : 한 줄 
+ td : 한 칸
+ 1.width,height를 table에 적용하는 방식
+ 2.tr에 height를 사용하여 td의 높이를 모두 맞춤(단 ,width는 사용하지 않습니다.)
+ 3.td에는 width를 사용하나 첫번째 tr에 해당되는 td에만 width을 적용합니다. 
+ 
+  -->
+ <table border="1" width="500" height="120"><!-- 전체 500 -->
+ <tr height="80"><!-- 이것도 (높이) 마찬가지 -->
+ <td width="100">123</td><!-- 여기서 100 사용 -->
+ <td width="100">1233</td><!-- 여기서 100 사용 -->
+ <td>1233</td><!-- 따라서 여기는 300남아서 300 -->
+ </tr>
+ <tr>
+ <td>123</td>
+ <td>1233</td>
+ <td>1233</td>
+ </tr>
+ </table>
+ <br>
+ <!-- colspan : 칸과 칸을 합칠 때 사용합니다. 숫자는 무조건 2부터 시작합니다. -->
+ <!-- rowspan : 세로를 합칠 때 사용합니다. 숫자는 무조건 2부터 시작합니다. -->
+ <!--  align : left,right,center 표 안에 이미지, 텍스트 위치를 변경  -->
+ <!-- 한줄에4칸짜리 3줄 100씩 -->
+ <table border="1" width="400" height="300" align="center">
+ <!-- table 안에 align을 사용하면 테이블 전체가 움직인다.  -->
+ <tr align="center">
+ <td colspan="2">0k0k1,2</td>
+ <td>0k0k3</td>
+ <td align="left">0k0k4</td>
+ </tr>
+ <tr>
+ <td colspan="3" align="center">0k0k5,6,7</td>
+ <td rowspan="2">0k0k8,12</td>
+ </tr>
+ <tr>
+ <td>0k0k9</td>
+ <td>0k0k10</td>
+ <td>0k0k11</td>
+
+ </tr>
+ 
+ </table>
+ 
+ 
+ 
+ 
+
+</body>
+</html>

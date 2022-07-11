@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="EUC-KR">
+<title>HTML 2일차 Padding</title>
+<style>
+	body{ margin: 0; padding: 0; }
+	
+	.olcss{ list-style: none; margin: 0px; padding: 0px; width:150px; border: 1px solid red; }
+	.licss{ width: 140px; height: 30px; border: 1px solid black; padding-left: 10px;}
+	/* 부모 태그에 width값이 없을 경우 100%로 적용됨 (빈 공간까지 모두 사용하기 때문에 작동 오류가 일어날 수 있음)
+	   때문에 자식 태그와 같은 width값을 맞춰주는 게 좋다. float를 사용하지 않을 경우, height는 자동으로 적용됨
+	   padding 사용시 적용한 픽셀값만큼을 width값에서 빼줘야 함*/
+	   
+	.licss:hover{ background-color: pink }
+	/* hover : 마우스를 메뉴 위에 올렸을 때 백그라운드 컬러가 바뀜 */   
+	
+	.olcss2{ list-style: none; width:760px; height:32px; margin: 0px; padding: 0px; border: 1px solid red; }
+	.licss2{ width: 150px; height: 30px; border: 1px solid black; float: left; }
+	/* 자식 태그에서 float를 사용하면 부모태그의 width, height값이 사라짐. 
+	   자식 태그의 width크기 * 개수 만큼 부모 태그의 width 크기를 늘려줘야함.
+	   height 32px 적용한 이유 : 2px - 위아래 solid 픽셀값까지 계산 */
+	
+</style>
+</head>
+<body>
+
+<ol class="olcss"> 
+	<li class="licss">1</li>
+	<li class="licss">2</li>
+	<li class="licss">3</li>
+	<li class="licss">4</li>
+	<li class="licss">5</li>
+</ol>
+
+<ol class="olcss2"> 
+	<li class="licss2">1</li>
+	<li class="licss2">2</li>
+	<li class="licss2">3</li>
+	<li class="licss2">4</li>
+	<li class="licss2">5</li>
+</ol>
+
+</body>
+</html>

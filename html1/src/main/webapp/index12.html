@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>HTML 2일차 Padding, margin</title>
+
+<style>
+
+	body{margin: 0; padding: 0;}
+	.box1{
+	width: 100px; height: 100px; background-color: pink; 
+	/* margin-left: 10px; margin-top: 10px; margin-bottom: 10px; */
+	/* margin-bottom : 자신을 기준으로 아래쪽에 있는 오브젝트를 밑으로 밀어냄 */
+	margin: 10px 5px 50px 0px;
+	/* margin : 시계방향으로 margin을 적용할 수 있음 
+	   margin : 10px -> 네 방향 전부 같은 픽셀값을 적용함 */
+	float:left;
+	/* float : left  왼쪽 정렬
+	   float : right 오른쪽 정렬
+	   float : center 가운데 정렬 */
+	}
+	
+	.box2{ width: 100px; height: 100px; background-color: skyblue; float:left; }
+	/* float:left를 box2에도 사용했을 경우 box1을 기준으로 왼쪽 정렬하게 됨 */
+	.box3{ width: 100px; height: 100px; background-color: gray; clear:both;}
+	/* clear: both - float를 초기화 시킬 때 사용함 */
+	
+	.ulcss{ list-style: none; margin: 0; padding: 0; float: right; margin-right: 10px;}
+	/* list-style : none 으로 디스크 모양을 없애준 뒤, margin과 padding을 이용해 여백을 없애줌 */
+	
+	.licss{ width: 200px; height: 30px; border: 1px solid black; float: left; text-align: center; line-height: 30px;}
+	
+	/* !주의사항
+	   float : right를 licss에 적용하면 오른쪽으로 정렬 + 역순 정렬이 됨
+	   자식 태그에 float : left를 적용하고, 부모 태그에 float : right를 적용하면 오른쪽에 순차적으로 정렬할 수 있음 */
+	
+</style>
+
+</head>
+<body>
+
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div><br>
+
+<ul class="ulcss">
+	<li class="licss">1</li>
+	<li class="licss">2</li>
+	<li class="licss">3</li>
+	<li class="licss">4</li>
+	<li class="licss">5</li>
+</ul>
+
+</body>
+</html>

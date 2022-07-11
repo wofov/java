@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>html 1.0 1일차 기본태그 배우는 중 </title>
+</head>
+<body>
+<img src="https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E">
+<!-- img 태그 : 이미지를 가져올 때 사용합니다.  
+[속성]
+src(경로 URL)
+width(가로) height(세로)-->
+<br>
+<img src="./2.jfif" width="100" height="100"><br><br>
+<!-- 
+절대경로 : http,https로 시작하여 적용하는 URL 주소
+상대경로 : ./   ../를 이용하여 디렉토리별로 경로주소를 설정함 -->
+<a href = "http://www.naver.com">네이버</a>
+<!-- a태그 : 페이지 이동 
+href(속성) : 경로 -->
+<br>
+<a href="./index1.html">이전 페이지</a>
+<br><br>
+<a href="http://nate.com"><font color="red">네이트닷컴</a></font>
+<!-- a태그 사용시 a 태그 안에 하위 태그를 적용해야 합니다  
+target(속성) : 웹페이지 이동을 어떤 형식으로 할 것인지 정함
+_self:현재 오픈된 페이지에서 이동
+_black:새로운 탭에서 페이지 이동
+_top:모바일에서 최상위 탭으로 이동
+_new:모바일에서 신규탭으로 이동 -->
+<br>
+<a href="http://google.com" target="_self">구글</a><br> <!-- 기존탭 -->
+<a href="http://daum.net" target="_black">다음</a><br> <!-- 신규탭 -->
+<a href="http://nate.com" target="_top">네이트</a><br> <!-- 기존탭(모바일이면 무조건 최상위탭) -->
+<a href="http://nate.com" target="_new">네이트</a><br> <!-- 신규탭(모바일도) -->
+</body>
+</html>

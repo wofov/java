@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>html 1일차 3.0 기본태그2</title>
+</head>
+<body>
+<select><!-- 선택태그 고르게 나열해줌.  -->
+<option>skt </option><!-- 고르는거 // select 묶고 option사용해야함. -->
+<option>kt </option>
+<option>lg </option>
+</select>
+<br><br><br><br><br><br>
+<!--cols:한줄당 50자까지
+lows:스크롤 전에 10줄까지 보여주겠다
+textarea 이 안에는 주석 안됨. 다 출력됨 //사용자가 많은 양의 내용을 입력할 때   -->
+<textarea cols="50" lows="10">
+이용약관
+
+
+
+</textarea><br>
+<form method="post" action="http://naver.com" >
+<!-- method 여기서는 전송하는 형태  
+submit : 클릭을 해도되고 엔터를 입력해도 된다. 
+form과 같이 사용 해야 하며, 클릭 or 엔터를 누를 때 작동한다. 
+검색이나 로그인할때 비유.-->
+<input type="text"><br>
+<input type="checkbox">sms수신<br>
+<input type="password"><br>
+<input type="submit" value = "전송">
+<input type="button" value="전송2" onclick="abc()">
+<input type="reset" value="취소">
+<!-- button은 단독적으로 사용가능하고(form 있어도 되고 없어도 된다)
+자바스크립트랑 사용해야함. 
+아이디 중복체크 등등 마우스로만 클릭할때는 버튼 이용
+
+form을 사용하려면 submit, reset은 안에 묶여있어야 한다. 
+
+reset은 초기화(사용자가 입력한 값들을),form태그 안에 있어야한다.-->
+</form>
+<!-- 데이터 전송할 때 form 사용
+사용자가 입력하는 데이터를 전송하기 위한 태그.  -->
+
+
+</body>
+</html>
+<script>
+function abc(){
+	location.href="http://nate.com";
+}
+</script>

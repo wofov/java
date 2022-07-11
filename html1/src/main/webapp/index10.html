@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>HTML 2일차 HTML 4.0 + CSS 2.0</title>
+<!-- 태그에 style을 바로 적용하면 코드가 너무 길어지기 때문에 style 태그를 따로 빼서 적용할 수 있음. -->
+	<style>
+		/* 스타일 시트 안의 주석은 자바와 똑같아요 */
+		/* .(class) , #(id) */
+		.box{	
+		width: 100px;
+		height: 100px;
+		background-color: orange;
+		}
+		#box{
+		width: 100px;
+		height: 100px;
+		background-color: pink;
+		}
+		.color1{
+		background-color: black;
+		}
+		.box3{
+		width:100px;
+		height:100px;
+		background-color: orange;
+		border-radius: 100px;	/* border-radius : 타원형으로 만들 때 사용하는 속성 */
+		}
+		.btn{
+		width:200px;
+		height:40px;
+		background-color: skyblue;
+		border-radius: 40px;
+		text-align: center;	/* text-align : left, center, right 텍스트 정렬을 설정 */
+		line-height: 40px;	/* 한 라인에 대한 높이값 (줄간격) */
+		}
+	</style>
+
+</head>
+
+<body>
+	<!-- 
+	[class(style을 사용하기 위한 속성), id(Javascript), name(backend에게 전송하는 속성)] 
+	class : 중복 사용이 가능하기 때문에 퍼블리셔가 사용
+	id : 중복 사용이 불가능. 자바 스크립트 코드를 짜는 프론트엔드가 사용
+	name : java로 값을 받아야하기 때문에 백엔드가 사용
+	-->
+	<div style="width: 100px; height: 100px; background-color: blue;"></div>
+	<div class="box"></div>
+	<div id="box"></div>
+	<!-- 같은 style시트를 사용하는 경우 변경 요소만 빼서 style시트에 추가할 수 있음 (최대 10개) -->
+	<div class="box color1"></div>
+	<!-- class는 여러가지 값을 가져올 수 있습니다. id는 중복이 되지 않습니다.(자바 스크립트에서 중복 실행 불가능) -->
+	
+	<div class="box3"></div>
+	<div class="btn">회원가입</div>
+	
+</body>
+</html>

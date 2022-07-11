@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- 
+lang : ko 한국어 기반
+ -->
+<html lang="ko">
+<head>
+<meta charset="EUC-KR">
+<title>HTML 1일차 HTML3.0 기본태그3</title>
+</head>
+<body>
+<!--
+[단위]
+px(pixel) : pc와 모바일 둘 다 사용하는 단위
+em, in, inch : 외국에서 쓰는 단위
+% , vh, vw : 모바일에서 쓰는 단위
+[style]
+*값 뒤에 ;안쓰면 오류남
+-->
+<!-- <input type="text" style="width:200px; height:30px;"><br>
+	<input type="button" value="로그인" style="width: 100px; height: 100px"> -->
+<form method="post" action="https://www.naver.com">
+<table border="1" width="550" height="120" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100">&nbsp;아이디</td>
+<td width="300" align="center"><input type="text" style="width: 280px; height: 30px;" tabindex="1"></td>
+<td width="150" rowspan="2" align="center"><input type="submit" style="width: 130px; height: 70px;" value="로그인" tabindex="3"></td>
+</tr>
+
+<tr>
+<td>&nbsp;패스워드</td>
+<td align="center"><input type="password" style="width: 280px; height: 30px;" tabindex="2" ></td>
+</tr>
+<!-- tabindex : 커서가 TAB키를 누를 경우 이동하는 순서를 정할 때 사용함 -->
+<tr>
+<td colspan="3"><input type="checkbox" checked>자동 로그인</td>
+</tr>
+</table>
+</form>
+
+
+</body>
+</html>
