@@ -1,0 +1,38 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 3일차 HTML 4.0 </title>
+<style>
+body{margin:0; padding:0;}
+div { width: 100px; height: 100px;}
+.a{background-color: red; position: static; padding-right:50px;}
+.b{background-color: blue; position: relative; left:100%; margin-left:-100px;}
+/* 하단 스크롤바 생기면 망한 웹사이트 */
+.c{background-color: black;}
+.d{background-color: pink; position: absolute; right:100px; padding-top:100px;}
+/*absolute top:0px; 맨위로 margin-top=100px; 원래 기준에서 움직임
+position 오브젝트의 성격을 변화시킬 때 사용하는 속성
+static(고정), relative(중간형태 margin,top,left,right,bottom)
+absolute(자유분방함)
+--아이 ...*/
+.popup { width: 600px; height: 600px; background-color: red;
+display : block; position: relative;}
+.close{ width: 50px; height: 50px; background-color: green;
+position: absolute; right: 0px; bottom:0px; color:white; font-size:25px; 
+font-weight:bold; text-align : center; line-height: 50px;}
+/*자식이 absolute일 경우 부모는 무조건 relative로 셋팅해야 합니다. */
+.li{padding-top:300px; background-color: blue;}
+
+
+</style>
+</head>
+<body>
+<div class="a"></div>
+<div class="b"></div>
+<div class="c"></div>
+<div class="d"></div>
+<span class="popup">
+<div class="close li" >x</div>
+</span>
+</body>
+</html>

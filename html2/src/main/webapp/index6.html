@@ -1,0 +1,51 @@
+
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<title>사이트 전체 레이아웃</title>
+<style>
+body{margin: 0; padding: 0;}
+span{display: block;}
+ul,ol{list-style : none; margin: 0; padding: 0;}
+
+/*position : absolute에 margin:0 auto;(x)*/
+.top{width: 1200px; height: 40px;
+background-color: #ccc; margin: 0 auto; position: relative;}
+/*relative 이것저것 명령어 수용이 가능함 위 명령어 에서 absolute 안먹음*/
+.top_span{height: 40px; }
+.top_ol{width:300px; height: 40px; float:right;}
+.top_li{width: 75px; height: 40px; text-align:center; line-height: 40px; float:left;
+font-size:12px;}
+
+.menu{width: 1200px; height: 80px; background-color: skyblue; margin: 0 auto;
+position: relative;}
+.top_ol1{width: 600px; height: 50px;}
+
+
+
+</style>
+</head>
+<body>
+<!-- 최상단(로그인~고객센터) -->
+<div class="top">
+	<span class="top_span" >
+	<ol class="top_ol" >
+	<li class="top_li">HOME</li>
+	<li class="top_li">LOGIN</li>
+	<li class="top_li">member</li>
+	<li class="top_li">customer</li>
+	</ol>
+	
+	</span>
+</div>
+<!-- 상단 메뉴 파트 -->
+<div class="menu">
+
+</div>
+<!-- 배너파트 -->
+<!-- 상품출력 파트 -->
+<!-- 카피라이터 파트 -->
+
+</body>
+</html>
