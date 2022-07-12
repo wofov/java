@@ -1,4 +1,3 @@
-
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -18,9 +17,64 @@ background-color: #ccc; margin: 0 auto; position: relative;}
 .top_li{width: 75px; height: 40px; text-align:center; line-height: 40px; float:left;
 font-size:12px;}
 
-.menu{width: 1200px; height: 80px; background-color: skyblue; margin: 0 auto;
+.menu{width: 1200px; height: 80px; background-color: #FFFACD; margin: 0 auto; 
 position: relative;}
-.top_ol1{width: 600px; height: 50px;}
+.top_span2{height: 50px; }
+.top_ol2{width:1170px; height: 50px; margin: 0 auto; position: relative;}
+.top_li2{width: 240px; height: 50px; text-align:center; float:left; background-color: #FFDAB9; margin-top:15px;}
+.top_li22{width: 600px; height: 50px; text-align:center; float:right; background-color: #FFDAB9; margin-top:15px;}
+
+/*메뉴바 새로운 방법
+.menu{width: 1200px; height: 65px; margin: 0 auto; background-color:blue; position: relative;
+padding-top: 15px}
+.logo{ position: absolute; width: 240px; height: 50px; background-color: green; left:15px;}
+.main_menu{ position: absolute; width: 600px; height: 50px; background-color: purple; right:15px;}
+*/
+
+/* 하윤성코드
+.banner{width: 1200px; height: 400px; background-color: pink; margin: 0 auto; position: relative;}
+.disc{ width: 165px; height: 15px; list-style:none;margin: 0 auto; position: relative;}
+.licss{width: 15px; height: 15px; background-color: black;
+border-radius: 15px; float:left; margin-left:10px; margin-top: 360px;
+}
+.red{background-color: red; }
+.nomargin{margin-left:0px;}*/ 
+ 
+/*배너 새로운 방법*/
+/*.disc_span{height: 15px; display: block; width: 50%; position: absolute;
+ bottom : 25px; } << 디스크 갯수 늘어날 수 있음. (width 안잡는 이유)*/
+.banner{position: relative; width: 1200px; height: 400px; background-color: #F8F8FF; margin: 0 auto; 
+text-align:center;}/*자식 태그가 inline, inline -block일 경우 text-align:center;로 화면 가운데로 정렬 가능.*/
+ .disc_span2{ height: 15px; display:inline-block; margin-left:auto; margin-right: auto; 
+position: relative; top:360px; }
+ /*margin-left:auto; margin-right: auto; 
+ 부모 태그 가로 기준으로 왼쪽, 오른쪽을 동일한 사이즐르 계산하여 적용하는 방식입니다. 
+ */
+.disc{width: 15px; height: 15px; border-radius: 15px; background-color: black; float:left; margin-left:10px;}
+.nomargin{margin-left:0px;}
+.red{background-color: red; /* margin-left:45%; */}
+/*
+inline block : span에 주로 사용하는 속성입니다. 
+(그냥 조절이 되며 사이즈가 커짐 줄바꿈 못함. width, height, line-height가 적용이 됨)
+inline : 자동 사이즈로 조절이 되나 줄바꿈을 하지 않음. 
+(width, height가 적용은 되나 line-height가 적용이 안됨 - 텍스트 일 경우는 안됨.)
+*/
+/*중요함    ★★★★   중요함★★★★
+margin: 0 auto; 를 사용 할수 있는 경우
+1.position:absolute(x)
+2.width값이 무조건 적용이 되야함. 
+*/
+.img{width: 1200px; height: auto; position: relative; margin:0 auto; }
+/*background-color: #E6E6FA // height가 auto라면 배경 칼라 없음.
+background-color: #F5FFFA
+img 가로 1160 잡고 패딩20씩 주기(하단 제외) minibox에 마진 20씩 주기 */ 
+.img2{width: 1200px; height: auto; position: relative; margin:0 auto;}
+.minibox{width: 250px; height: 300px; float:left; margin-left:40px; background-color: black;
+margin-top:20px; margin-bottom: 20px;}
+
+.copy{width: 1200px; height: 100px; background-color:#EE82EE; margin:0 auto; clear:both;
+color:white; font-size:12px;}
+.te{text-align: right;}
 
 
 
@@ -29,23 +83,66 @@ position: relative;}
 <body>
 <!-- 최상단(로그인~고객센터) -->
 <div class="top">
-	<span class="top_span" >
-	<ol class="top_ol" >
-	<li class="top_li">HOME</li>
-	<li class="top_li">LOGIN</li>
-	<li class="top_li">member</li>
-	<li class="top_li">customer</li>
-	</ol>
-	
-	</span>
+   <span class="top_span" >
+   <ol class="top_ol" >
+   <li class="top_li">HOME</li>
+   <li class="top_li">LOGIN</li>
+   <li class="top_li">member</li>
+   <li class="top_li">customer</li>
+   </ol>
+   </span>
 </div>
 <!-- 상단 메뉴 파트 -->
 <div class="menu">
-
+<span class="top_span2" >
+   <ol class="top_ol2" >
+   <li class="top_li2"></li>
+   <li class="top_li22"></li>
+   </ol>
+   </span>
 </div>
-<!-- 배너파트 -->
-<!-- 상품출력 파트 -->
-<!-- 카피라이터 파트 -->
+<!--  새로운 로고 방식 
+<div class="menu">
+<span class="logo"></span>
+<span class="main_menu"></span></div>-->
 
+<!-- 배너파트 --><!--
+<div class="banner">
+<ol class="disc">
+<li class="licss nomargin red"></li>
+<li class="licss"></li>
+<li class="licss"></li>
+<li class="licss"></li>
+<li class="licss"></li></ol></div> -->
+<!--  new 배너 -->
+<div class="banner">
+<span class="disc_span2">
+<div class="disc nomargin red"></div>
+<div class="disc"></div>
+<div class="disc"></div>
+<div class="disc"></div>
+<div class="disc"></div>
+</span>
+</div>
+<!-- 상품출력 파트 ** 여백 공간 코드 작성시 좌우 px를 합친다는 생각으로 퍼블리싱 해야함.-->
+<div class="img">
+<ul class="img2">
+<li class="minibox"></li>
+<li class="minibox"></li>
+<li class="minibox"></li>
+<li class="minibox"></li>
+<li class="minibox"></li>
+<li class="minibox"></li>
+<li class="minibox"></li>
+<li class="minibox"></li>
+
+</ul></div>
+
+<!-- 카피라이터 파트 -->
+<div class="copy te"><!-- 142-81-38153 -->
+<span>Copyright ⓒ 1999-2022 Naver Corp. All Rights reserved.</span>
+<span>회사명, 대표자명, 사업자등록번호, 통신판매번호 <a href="http://ftc.go.kr/bizCommPop.do?wrkr_no=1428138153" target="_blank">[사업자등록확인]</a></span>
+<span>대표전화, 개인정보담당자명, 대표메일, 주소</span>
+</div>
 </body>
 </html>

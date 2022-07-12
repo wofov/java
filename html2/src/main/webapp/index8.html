@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="id-edge, chrome=1">
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<!-- 모바일 사이즈 340~580px; (원스크린) : (투스크린) 720px; -->
+</head>
+<body>
+<input type="number"><!-- 숫자만 입력하는 디바이스 형태 모바일 전용 -->
+<br>
+<input type="color"><!-- 컬러피커(모바일 및 PC에 사용가능 -->
+<br>
+<input type="tel"><!-- 전화번호 디바이스 형태(모바일 전용) -->
+<br>
+<input type="date"><!-- 달력 디바이스 형태(모바일 +pc) -->
+<br>
+<input type="time"><!-- 시간 디바이스 형태(모바일 +pc) -->
+<br>
+<input type="week"><!-- 주일 표시(모바일 +pc)  -->
+<br>
+<input type="email"><!-- 이메일 입력하는 전용 (모바일)-->
+<br>
+<input type="datetime-local"><!-- 날짜와 시간을 동시에 입력받음(모바일 +pc) -->
+<br>
+<!-- oninput : input+output 사용시 적용되는 속성 -->
+<form oninput="aa.value=parseInt(a.value)">
+<!-- range 범위 선택 속성입니다. min최소, max최대 -->
+min:1<input type="range" min="1" max="10" id="a">max:10
+<br>
+<!-- output : input에 대한 값을 받아서 출력하는 태그 (for,name) -->
+<output for="a" name="aa" value="5">5</output>
+</form>
+<br><br><br><br>
+<!-- 이미지 버튼을 사용할 때 사용하는 속성입니다. -->
+<input type="image" src="./logo_quick_01.png">
+<br>
+<form method="post" action="http://www.naver.com">
+<button type="submit">로그인</button>
+<!-- 버튼은 기본 submit고 button이라고 작성해여 버튼으로 인지됨.
+type="button" type="reset" 물론, type="submit"라고 작성해도 submit인지 됨
+-->
+</form>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+</body>
+</html>
