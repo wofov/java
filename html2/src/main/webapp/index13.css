@@ -1,0 +1,35 @@
+@charset "UTF-8";
+body{margin: 0; padding: 0;}
+span,label {display: block;}
+ol,ul{list-style: none; margin: 0; padding: 0;}
+.header_css{height: 30px; background-color: #ccc;}
+.header_div{height: 30px; width:1200px; margin: 0 auto; }
+.ul_css{width: 240px; height: 30px; float: right;}
+.li_css{width: 80px; height: 30px; text-align: center;
+line-height: 30px; font-size:12px; float:left;
+}
+
+.nav_css{height: 60px; background-color: green;}
+.nav_div{width: 1200px; height: 60px; margin: 0 auto;}
+.nav_ol{width: 100%; height: 60px;}
+.nav_li{width: 150px; height: 60px; float:left;
+text-align:center; line-height: 60px; font-size:13px;}
+.nav_li:hover{background-color: rgba(255,255,255,0.5);}
+/*rgba:red,green,blue,alpha(투명도 1~0)*/
+/*.nav_li class안에 so_ul이라는 class 항목을 보여주도록 함
+해당 오브젝트만 적용함*/
+.nav_li:hover .so_ul{display: block;}
+
+.so_ul{width:1200px; height: 25px; display: none;}
+.so_li{width: 150px; height: 25px; font-size:13px; line-height: 25px;
+background-color: blue; float:left;}
+
+
+
+
+
+
+
+
+
+

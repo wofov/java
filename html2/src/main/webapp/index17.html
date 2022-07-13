@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="id-edge, chrome=1">
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="imagetoolbar" content="no">
+<title>HTML5일차 TABLE</title>
+<style>
+.tablecss {position: relative; width: 450px; }
+.tablecss > span { display: block; width: inherit; height: 80px;
+overflow: auto;}
+.tablecss > span > table {
+	display: block; 
+	width: 100%;
+	
+}
+.tablecss > span > table > caption{
+	position: absolute;
+	width:430px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	background-color: gray;
+	top:0;
+	left:0;
+	z-index:1;
+}
+.tablecss > span > table > thead >tr{
+	width:430px;
+	position: absolute;
+	top : 20px;
+	left : 0px;
+	height: 25px;
+	background-color: white;
+	z-index:1;
+}
+.tablecss > span > table > tbody{
+	position: relative;
+	top : 40px;
+}
+.tablecss > span > table > tbody >tr > td{
+	width: 150px;
+}
+</style>
+</head>
+<body>
+<div class="tablecss">
+<span>
+
+<table border="1" cellpadding="0" cellspacing="0">
+<caption>각 지역별 창고 현황</caption>
+<thead> <!--  테이블에 목차 제목 -->
+	<tr>
+		<th style="width : 150px;">서울</th>
+		<th style="width : 150px;">경기도</th>
+		<th style="width : 150px;">인천</th>
+	</tr>
+</thead>
+
+<tbody> <!--  테이블 목차에 대한 데이터 값 -->
+	<tr>
+		<td>2,000</td>
+		<td>1,000</td>
+		<td>9,000</td>
+	</tr>
+	<tr>
+		<td>200</td>
+		<td>100</td>
+		<td>900</td>
+	</tr>
+	<tr>
+		<td>20</td>
+		<td>10</td>
+		<td>90</td>
+	</tr>
+	<tr>
+		<td>2,000</td>
+		<td>1,000</td>
+		<td>9,000</td>
+	</tr>
+	<tr>
+		<td>2,000</td>
+		<td>1,000</td>
+		<td>9,000</td>
+	</tr>
+	<tr>
+		<td>2,000</td>
+		<td>1,000</td>
+		<td>9,000</td>
+	</tr>
+</tbody>
+</table>
+</span>
+</div>
+</body>
+</html>

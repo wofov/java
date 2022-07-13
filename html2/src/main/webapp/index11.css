@@ -1,0 +1,22 @@
+@charset "UTF-8";
+body{margin: 0; padding: 0; }
+.header_css{height: 50px; background-color: gray;}
+.header_div{width: 1200px; height: 50px; 
+background-color: green; margin: 0 auto;}
+.nav_css{height: 100px; background-color: pink;}
+.main_css{height: auto; background-color: yellow;}
+.se1{height: 450px; background-color: orange;}
+.se2{height: 800px; background-color: blue;}
+.aside_left{width:30%; height: 800px; background-color: red;
+float:left; }
+.article_right{width:70%; height:800px; background-color: purple;
+float:right; }
+.article_banner{width:50%; height: 100px; clear:both;
+background-color: black;}
+.notice{height: 300px; background-color: skyblue;}
+.footer_css{height: 300px; background-color: navy;}
+
+
+
+
+
