@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Javascript 2일차 함수  +return 함수 응용</title>
+<script src="http://192.168.100.201:8080/html2/js6.js"></script>
+
+<script>
+function return1(k) {
+	//해당 함수값을 받는 역활
+	var msg;
+	if(k%2==0){
+		msg ="짝수";
+	}
+	else{
+		msg ="홀수123";
+	}
+	return msg; //결과를 상대방 서버에 재 호출 
+}
+call1();//call1(); //상대방 서버에 있는 함수 호출 
+/*
+응용문제 
+해당 함수들을 이용하여 결과값을 return 받는 코드를 작성하시요.
+숫자 20, 30을 함수로 전달 
+결가 값 출력 600;
+ 
+ */
+ a(10,30);
+ function a(a1,b1) {
+	var c = b(a1,b1);
+	console.log(c);
+}
+ function b(a2,b2) {
+	var z = a2 * b2;
+	return z;
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

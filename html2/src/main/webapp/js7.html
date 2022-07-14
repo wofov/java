@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Javascript 2일차 함수 외부 api js 연결 + 배열</title>
+<script src="http://192.168.100.200:8080/js7_1.js"></script>
+<script src="http://192.168.100.202:5500/js7_B.js"></script>
+<script>
+function re(a1) {
+	var c1 = a1/3;
+	return c1;
+}
+callback();
+
+function re2(a2) {
+	var c2 ="홍길동님 최종 결제 금액은 "+a2+"원 입니다.";
+	return c2;
+}
+callback2();
+
+var data = [1,2,3,4,5]; // 숫자 배열
+console.log(data[0]); // 배열[인데스번호]
+
+var data2 = ["홍길동","이순신","아"]; // 문자 배열 
+console.log(data2[1]);
+
+var ea = data2.length;
+console.log(ea);
+
+var q=0;
+while(q<ea){
+	console.log(data2[q]);
+	q++;
+}
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

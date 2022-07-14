@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Javascript 2일차 함수 외부 api js 연결 + 배열(응용편)</title>
+<!-- 
+응용문제
+ -->
+<script src="http://192.168.100.202:5500/js9_A.js?v=1"></script>
+<script src="http://192.168.100.200:8080/html2/js9_B.js?v=1"></script>
+<script>
+var us = "park";
+function re1(index) {
+	var data_b =[2500,3400,1000,6200];
+	var c12 = call(index);
+	return [c12, data_b[index]];
+}
+callback(us);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
