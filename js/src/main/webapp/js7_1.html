@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>javascript 4일차 파라미터 전달(FOrm, location)</title>
+<script>
+	var url = window.location.search;
+	var s1 = url.split("&eee=");
+
+	var ko = s1[1];
+	
+	var s2 = s1[0].split("?ddd=");
+	
+	var hu = s2[1];
+
+
+</script>
+</head>
+<body>
+아이디 : <span id="userid"></span><br>
+국적 : <span id="ue"></span>
+
+</body>
+<script>
+document.getElementById("userid").innerText=hu;
+document.getElementById("ue").innerText=ko;
+
+</script>
+</html>
