@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>javascript 5일차 all checkbox기능</title>
+<script>
+	function aa() {
+		var i = document.getElementById("ra");
+		var ck,ck2;
+		if(i.checked==true){
+			ck=true;
+		}
+		else{
+			ck=false;
+			ck2=true;
+		}
+		
+		var w=1;
+		while(w<5){
+			document.getElementById("ra"+w).checked=ck;
+			document.getElementById("rra"+w).checked=ck2;
+			w++;
+		}
+		
+	}
+	function bb() {
+		var i = document.getElementById("ra");
+		if(i.checked==true){
+			i.checked=false;
+		}
+	}
+
+</script>
+<style>
+.ad { margin-left :150px;}
+</style>
+</head>
+<body>
+[해당 광고 서비스를 선택하세요]<br><br>
+<form>
+<span>
+SMS 수신여부 : <input type="radio" id="ra1" name="ra1">동의함<input type="radio" id="rra1" name="ra1" onclick="bb()" checked>동의안함<br>
+이메일 수신여부 : <input type="radio" id="ra2" name="ra2">동의함<input type="radio" id="rra2" name="ra2" onclick="bb()" checked>동의안함<br>
+이벤트 알림 수신여부 : <input type="radio" id="ra3" name="ra3">동의함<input type="radio" id="rra3" name="ra3" onclick="bb()" checked>동의안함<br>
+푸시알림 수신여부 : <input type="radio" id="ra4" name="ra4">동의함<input type="radio" id="rra4"  name="ra4" onclick="bb()" checked>동의안함<br>
+<br>
+<label class="ad"><input type="checkbox" name="ra" id="ra" onclick="aa()">전체 서비스에 동의함</label>
+</span></form>
+</body>
+<script>
+
+
+
+
+</script>
+</html>

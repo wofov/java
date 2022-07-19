@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+</head>
+<body>
+<span id="box"></span>
+
+
+</body>
+<script>
+	var list =["푸드페어","메가뷰티쇼","종근당건강","필립스","글로벌 쇼핑데이","특가 대방출"];
+	var i = document.getElementById("box");
+	var ck;
+	var text,la;
+	
+	var w = 0;
+	while(w<list.length){
+		console.log(list[w]);
+		la = document.createElement("label");
+		ck = document.createElement("input");
+		ck.type="checkbox";
+		ck.name="ap"+w;
+		ck.value=w;
+		text = document.createTextNode(list[w]); 
+		ck.append(text);
+		
+		la.append(ck);
+		la.append(text);
+		document.getElementById("hi").append(la);
+		w++;
+	}
+</script>
+
+</html>

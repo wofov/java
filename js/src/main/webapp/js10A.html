@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>javascript 5일차</title>
+	<script>
+		function aa() {
+			var w=0;
+			var ct=0;
+			var bo = false;
+			while(w<list.length){
+				var as = document.getElementsByName("ap"+w);
+				console.log(as[0].checked);
+				
+				if(as[0].checked==true){
+					ct++;
+				}
+				w++;
+			}
+			if(ct>=2){
+				frm.submit();
+			}
+			else{
+				alert("2개 이상 선택하세요");
+			}
+		}
+	</script>
+</head>
+<body>
+장바구니 시스템 [사용자가 구매할 과일을 선택]<br>
+<form id="frm" name="frm" method="get" action="http://192.168.100.200:8080/js/js10_B.html">
+<div id="hi">
+</div><br>
+해당 과일을 2가지 이상 선택하셔야 합니다.
+<br>
+<input type="button" value="전송" onclick="aa()">
+</form>
+
+</body>
+<script>
+	var list =["사과","딸기","바나나","키위","파인애플","수박","참외"];
+	var i = document.getElementById("hi");
+	var ck;
+	var text,la;
+	
+	var w = 0;
+	while(w<list.length){
+		console.log(list[w]);
+		la = document.createElement("label");
+		ck = document.createElement("input");
+		ck.type="checkbox";
+		ck.name="ap"+w;
+		ck.value=w;
+		text = document.createTextNode(list[w]); 
+		ck.append(text);
+		
+		la.append(ck);
+		la.append(text);
+		document.getElementById("hi").append(la);
+		w++;
+	}
+</script>
+</html>

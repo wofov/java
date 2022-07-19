@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<script>
+	var names = ["sms","email","event","push"];
+	
+	function abc() {
+		var bo ;
+		var code;
+		//f.all << 등등 이런식 배열로 만들때 사용하면 안됨.
+		
+		if(f.all.checked==true){
+			bo = true;
+			code=0;
+		}
+		else{
+			bo = true;
+			code=1;
+		}
+		var w = 0 ;
+		var test;
+		while(w<names.length){
+			test = document.getElementsByName(names[w]);
+			//console.log(test[0]);
+			test[code].checked=bo;
+			w++;
+		}
+		
+		
+	}
+
+
+</script>
+</head>
+<body>
+<form name="f" id="f">
+<p>해당광고서비스선택</p>
+<ul>
+<li>수시여부 : <input type="radio" name="sms" value="Y">동의함<input type="radio" name="sms" value="N" checked>동의안함</li>
+<li>이메일 <input type="radio" name="email" value="Y">동의함<input type="radio" name="email" value="N" checked>동의안함</li>
+<li>이벤트 알림 : <input type="radio" name="event" value="Y">동의함<input type="radio" name="event" value="N" checked>동의안함</li>
+<li>푸시알림 : <input type="radio" name="push" value="Y">동의함<input type="radio" name="push" value="N" checked>동의안함</li>
+</ul>
+<label><input type="checkbox" name="all" onclick="abc()">전체 서비스 동의함</label>
+</form>
+</body>
+</html>
