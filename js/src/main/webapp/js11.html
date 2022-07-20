@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>javascript 6일차 NODE-1차 (attribute)</title>
+<script>
+	var data=["1","2","3","4","5","6"];
+	function abc(no) {
+		//var mu = this.getAttribute("menua");
+		//var mu1 = document.getElementById("menus2").children;
+		//console.log(mu1);
+		console.log(data[no]);
+		
+		
+	}
+</script>
+</head>
+<body>
+<ul id="menus">
+<li menu="0">메뉴1</li>
+<li menu="1">메뉴2</li>
+<li menu="2">메뉴3</li>
+<li menu="3">메뉴4</li>
+<li menu="4">메뉴5</li>
+<li menu="5">메뉴6</li>
+</ul>
+
+<ul id="menus2" >
+<li onclick="abc(0)">메뉴1</li>
+<li onclick="abc(1)">메뉴2</li>
+<li onclick="abc(2)">메뉴3</li>
+<li  onclick="abc(3)">메뉴4</li>
+<li  onclick="abc(4)">메뉴5</li>
+<li  onclick="abc(5)" >메뉴6</li>
+</ul>
+</body>
+<script>
+	var m = document.getElementById("menus");
+	//console.log(m.children[0]);
+	var ea = m.children.length;
+	var w = 0;
+
+	while(w<ea){
+	//반복문안에 function : 안됨
+	//핸들링 함수형태의 사용시 반복문 안에 사용할 수 있음.
+	//단, 그 외 반복문 변수로 배열, 번호등 적용하지는 못하
+		m.children[w].onclick = function(aa) {
+		//alert("test");
+			var node = this.getAttribute("menu");
+			gopage(node);
+			//jquery attr, JAVA attribute
+			//javascript setAttribute(속성셋팅)
+		}
+		w++;
+	}
+	
+	function gopage(no) {
+		console.log(data[no]);
+		
+	}
+	
+</script>
+</html>

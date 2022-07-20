@@ -1,45 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html  lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Insert title here</title>
+<style>
+.abox{width: 130px; height: 60px;}
+</style>
 </head>
 <body>
 <span id="box"></span>
-
-
 </body>
 <script>
-	var list =["푸드페어","메가뷰티쇼","종근당건강","필립스","글로벌 쇼핑데이","특가 대방출"];
-	var list2=["https://www.coupang.com/np/campaigns/16160?from=home_C1&traid=home_C1&trcid=11169775",
-			"https://pages.coupang.com/p/62484?from=home_C1&traid=home_C1&trcid=6256722548",
-			"https://pages.coupang.com/f/s7260?from=home_C1&traid=home_C1&trcid=11168322",
-			"https://pages.coupang.com/f/s976?from=home_C1&traid=home_C1&trcid=11168328",
-			"https://pages.coupang.com/p/63611?from=home_C1&traid=home_C1&trcid=11169777",
-			"https://www.coupang.com/np/campaigns/82?from=home_C1&traid=home_C1&trcid=5667822457"
-			];
-	var i = document.getElementById("box");
-	var ck;
-	var text,la; 
-	
-	var w = 0;
-	while(w<list.length){
-		console.log(list[w]);
-		la = document.createElement("label");
-		ck = document.createElement("input");
-		ck.type="checkbox";
-		ck.name="ap"+w;
-		ck.value=w;
-		text = document.createTextNode(list[w]); 
-		ck.append(text);
-		
-		la.append(ck);
-		la.append(text);
-		document.getElementById("hi").append(la);
-		w++;
-	}
+   var list =["푸드페어","메가뷰티쇼","종근당건강","필립스","글로벌 쇼핑데이","특가 대방출"];
+   var list2=["https://www.coupang.com/np/campaigns/16160?from=home_C1&traid=home_C1&trcid=11169775",
+         "https://pages.coupang.com/p/62484?from=home_C1&traid=home_C1&trcid=6256722548",
+         "https://pages.coupang.com/f/s7260?from=home_C1&traid=home_C1&trcid=11168322",
+         "https://pages.coupang.com/f/s976?from=home_C1&traid=home_C1&trcid=11168328",
+         "https://pages.coupang.com/p/63611?from=home_C1&traid=home_C1&trcid=11169777",
+         "https://www.coupang.com/np/campaigns/82?from=home_C1&traid=home_C1&trcid=5667822457"
+         ];
+  
+   var w = 0;
+   while(w<list.length){
+      
+      hr = document.createElement("a");
+      hr.href=list2[w];
+      box = document.createElement("input");
+      box.type="button";
+      box.name="ap"+w;
+      box.value=list[w];
+      box.className="abox";
+      hr.append(box);
+      document.getElementById("box").append(hr);
+      w++;
+   }
 </script>
 
 </html>
