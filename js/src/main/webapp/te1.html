@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html  lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>javascript 6일차 배열 및 오브젝트 출력</title>
+
+<style>
+.abox{width: 130px; height: 60px;}
+.a{width: 390px;height: 120px;}
+</style>
+</head>
+<body>
+<form>
+<div class="a">
+<span id="box"></span>
+</div>
+</form>
+
+</body>
+<script>
+
+const ba = [
+    {
+     "p_title":"지마켓",
+     "p_img":"./mini/logo_quick_01.png",
+     "p_link":"https://www.gmarket.co.kr/"
+    },
+    {
+     "p_title":"옥션",
+     "p_img":"./mini/logo_quick_02.png",
+     "p_link":"http://www.auction.co.kr/"
+    },
+    {
+     "p_title":"하프클럽",
+     "p_img":"./mini/logo_quick_03.png",
+     "p_link":"http://www.halfclub.com/"
+    },
+    {
+     "p_title":"11번가",
+     "p_img":"./mini/logo_quick_04.png",
+     "p_link":"https://www.11st.co.kr/"
+    },
+    {
+     "p_title":"위메프",
+     "p_img":"./mini/logo_quick_05.png",
+     "p_link":"https://front.wemakeprice.com/"
+    },
+    {
+     "p_title":"쿠팡",
+     "p_img":"./mini/logo_quick_06.png",
+     "p_link":"https://www.coupang.com/"
+    }
+];
+ 
+   var i = document.getElementById("box");
+  
+   var s;
+   for(s in ba){
+      
+      hr = document.createElement("a");
+      hr.href=ba[s]["p_link"];
+      
+      im = document.createElement("img");
+      im.src=ba[s]["p_img"];
+      im.name="aa";
+      im.title=ba[s]["p_title"];
+      im.className="abox";
+      
+      hr.append(im);
+      i.append(hr);
+      
+   }
+</script>
+
+</html>

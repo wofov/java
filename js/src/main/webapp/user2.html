@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>javasctipt 7일차 상품 리스트 출력(응용)</title>
+<script src="http://192.168.100.77:8080/js/product_list.js"></script>
+<script>
+	function abc() {
+	var i = document.getElementById("a");
+		var us;
+		if(i.checked==true){
+			us=true;
+		}
+		else{
+			us=false;
+		}
+		var w=0;
+		while(w<4){
+			document.getElementById("ww"+w).checked=us;
+			w++;			
+		}
+	}
+</script>
+</head>
+<body>
+<form id="f" name="f" method="get" action="">
+<table border="1" cellpadding="0" cellspacing="0" >
+	<thead>
+		<tr>
+			<th width="30px"><input type="checkbox" onclick="abc()" name="a" id="a"></th>
+			<th width="210px">상품명</th>
+			<th width="120px">가격</th>
+		</tr>
+	</thead>
+	<tbody id="tbody">
+	</tbody>
+</table>
+<input type="submit" value="구매하기">
+</form>
+</body>
+<script>
+	var i = document.getElementById("tbody");
+	var text1, text2, td, tr, ck;
+	var list;
+	Object.keys(product["pd_name"]).forEach(function(a,b,c) {
+		tr = document.createElement("tr");
+		var s;
+		var w=0;
+		for(s in product){
+			td = document.createElement("td");
+			td2 = document.createElement("td");
+			td3 = document.createElement("td");
+			
+			list=product[s][a];
+			
+			text1 = document.createTextNode(list[0]);
+			
+			ck = document.createElement("input");
+			ck.type="checkbox";
+			ck.id="ww"+b;
+			ck.name="ww"+b;
+			ck.value=list[2];
+			
+			td.append(ck);
+ 			td2.append(text1);
+ 			td3.append(Number(list[1]).toLocaleString());
+			tr.append(td,td2,td3);
+			i.append(tr);
+		}
+	});
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>javascript 6일차 배열 및 오브젝트 출력</title>
+<script src="./ba.js"></script>
+<style>
+.ulcss{list-style:none; margin:0; padding:0; width: 300px;}
+.ulcss > li {}
+.ulcss > li > a > img { width: 100px; object-fit:cover; float:left;}
+</style>
+</head>
+<body>
+<ul id="ba" class="ulcss">
+
+</ul>
+</body>
+<script>
+//console.log(ba); //먼저 찍어봐
+	var html = document.getElementById("ba");
+	var html_li, html_a, html_img;
+	ba.forEach(function(aa,bb,cc) {//aa배열, bb인덱스
+		
+		html_li=document.createElement("li");
+		html_a=document.createElement("a");
+		html_img=document.createElement("img");
+		//console.log(bb);
+		//console.log(ba[bb]);
+		//console.log(Object.keys(ba[bb]));// >> 중요
+		Object.keys(ba[bb]).forEach(function(a1,a2,a3) {//a1 key , a2 키 인덱스
+			//console.log(ba[bb][a1]);
+			switch(a1){
+			case "p_title":
+				html_img.title=ba[bb][a1];
+			break;
+			
+			case "p_img":
+				html_img.src=ba[bb][a1];
+			break;
+			
+			case "p_link":
+				html_a.href=ba[bb][a1];
+			break;
+			}
+		});
+		html_a.append(html_img);
+		html_li.append(html_a);
+		html.append(html_li);
+	});
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<script src="http://192.168.100.77:8080/js/user.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+
+<span id="box" class="box"></span>
+<table border="1" cellpadding="0" cellspacing="0">
+	<thead>
+		<tr>
+			<th width="100px">회원명</th>
+			<th width="100px">회원레벨</th>
+			<th width="100px">회원나이</th>
+		</tr>
+	</thead>
+	<tbody id="tbody" align="center">
+	
+	</tbody>
+</table>
+
+</body>
+<script>
+var i = document.getElementById("tbody");
+var text,td,tr;
+
+person["member_list"].forEach(function(aa,bb,cc) {
+	//console.log(person["member_list"][bb]["name"]);
+	tr = document.createElement("tr");
+	Object.keys(person["member_list"][bb]).forEach(function(a1,a2,a3){
+	//console.log(person["member_list"][bb][a1]);
+	
+		td = document.createElement("td");
+		
+		if(a1=="age"){
+			text = document.createTextNode(person["member_list"][bb]["level"]);	
+		}
+		else if(a1=="level"){
+			text = document.createTextNode(person["member_list"][bb]["age"]);
+		}
+		else{
+			text = document.createTextNode(person["member_list"][bb][a1]);
+		}
+	
+	td.append(text);
+	tr.append(td);
+	i.append(tr);
+	
+	});
+	
+	
+	
+	
+});
+ 	
+//  	var f;
+//  	for(f in person["member_list"]){
+//  		var ff;
+//  		for(ff in person["member_list"][f]){
+//  			person["member_list"][f][ff];
+//  			switch(ff){
+//  			case "name":
+//  				person["member_list"][f][ff];
+//  				break;
+ 				
+//  			case "name":
+//  				person["member_list"][f][ff];
+//  				break;
+ 				
+//  			case "name":
+//  				person["member_list"][f][ff];
+//  				break;
+//  			}
+//  		}
+//  	}
+
+
+
+
+
+//console.log(person[0]["name"]);
+</script>
+</html>
