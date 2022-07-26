@@ -54,7 +54,16 @@ function member_list(jdata){
 		i.append(tr);
 		total--;
 	}
-	
+	console.log(j);
+	//console.log(j.members[0]);
+	var s ;
+	for(s in j.members){
+		var ss;
+		for(ss in j.members[s]){
+			console.log(j.members[s][ss]);
+		}
+		
+	}
 //	var i = document.getElementById("bb");
 //	var tr,tr,text;
 //	var ct=0;
@@ -98,6 +107,5 @@ function error(){
 	
 }
 function java_get(mid){
-	alert("gd");
-	location.href='./index3.html?mid='+mid;
+	location.href='./first.do?mid='+mid;
 }

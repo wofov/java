@@ -17,4 +17,13 @@
   	<servlet-name>webtest</servlet-name>
   	<url-pattern>/first.do</url-pattern>
   </servlet-mapping>
-</web-app>
+  
+   <servlet>
+  	<servlet-name>webtest2</servlet-name> <!-- 닉네임 -->
+  	<servlet-class>test.index4</servlet-class> <!-- class명 test라는 패키지 안에 first-->
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>webtest2</servlet-name>
+  	<url-pattern>/index4.do</url-pattern>
+  </servlet-mapping>
+</web-app> 
