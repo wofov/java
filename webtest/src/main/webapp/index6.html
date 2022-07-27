@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial=scale=1.0">
+<title>AJAX 3일차 (Jquery 기초문법)</title>
+<script src="./jquery.js"></script>
+<script>
+/* id만 불러온다.
+$(document).ready(function() {
+	alert("test");
+});
+*/
+
+$(function () { // jQuery 모든 문법을 사용해야함.
+	//click,change,submit
+	
+	$("#btn").click(function() {//핸들링 함수 
+		var $w = 0 ;
+		while($w<10){
+			console.log($w);
+			$w++;
+		}
+	});
+	$("#sbtn").change(function() {
+		//$this > #sbtn 지칭
+		var $a = $(this).val(); //변수 선언시 무조건 $ 붙는다.  - 값을 가져옴
+		//값을 가져올 때는 val();
+		console.log($a);
+	});
+	$("#bnt2").click(function() {
+		var $b = "홍길동";
+		$("#mid").val($b); //해당 값을 전달 빈 텍스트에 클릭하면 홍길동으로 됨.
+	});
+	
+	
+});
+
+/*
+(function() {
+	alert("tete");
+})();
+*/
+/*
+(function($) {
+	alert("tt");
+})(jQuery);
+*/
+
+</script>
+</head>
+<body>
+<input type="button" value="전송" id="btn">
+<select id="sbtn">
+<option value="">[통신사]</option>
+<option value="SKT">SKT</option>
+<option value="KT">KT</option>
+<option value="LG">LG</option>
+</select>
+<input type="text" id="mid">
+<input type="button" value="클릭" id="bnt2">
+
+</body>
+</html>
+
+
+
+
+
+
+

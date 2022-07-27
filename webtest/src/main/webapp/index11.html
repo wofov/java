@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial=scale=1.0">
+<title>AJAX 3일차 (Jquery 중급문법) ajax</title>
+<script src="./jquery.js"></script>
+<script>
+	$(function () {
+		$("#btn").click(function() {
+			var $mid = $("#mid").val();
+			var $key = "123456";
+			
+			$.ajax({
+				url:"./index11",//전송경로
+				data:{mid:$mid,key:$key},//파라미터
+				catch:false,//데이터 갱신사항
+				type:"GET",//post,get
+				
+				/*dataType:"text",*/
+				//java(back-end)사항은
+				//dataType이 있을 경우와 없을 경우가 발생합니다.
+				//없을 경우는 dataType을"text","json"또는 명시하지 
+				//않습니다. 단, url에 dataType이 있을 경우는
+				//해당 파일 속성명으로 전송하면 됩니다. 
+				success: function(data) {//전송이 올바를때
+					console.log(data);
+				},
+				error: function() {//오류
+					console.log("통신오류");
+				}
+				
+			});
+			
+		});
+		
+		
+	});
+	
+</script>
+</head>
+<body>
+<input type="text" id="mid">
+<input type="button" value="ㅎㅇ" id="btn">
+</body>
+</html>

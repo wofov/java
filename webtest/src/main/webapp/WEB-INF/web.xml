@@ -19,11 +19,67 @@
   </servlet-mapping>
   
    <servlet>
-  	<servlet-name>webtest2</servlet-name> <!-- 닉네임 -->
-  	<servlet-class>test.index4</servlet-class> <!-- class명 test라는 패키지 안에 first-->
+  	<servlet-name>webtest2</servlet-name> 
+  	<servlet-class>test.index4</servlet-class> 
   </servlet>
   <servlet-mapping>
   	<servlet-name>webtest2</servlet-name>
-  	<url-pattern>/index4.do</url-pattern>
+  	<url-pattern>/index4.do</url-pattern><!-- java 파일 url 경로 파일 변경 -->
   </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>webtest3</servlet-name> 
+  	<servlet-class>test.index5</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>webtest3</servlet-name>
+  	<url-pattern>/index5.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>webtest4</servlet-name> 
+  	<servlet-class>test.index7</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>webtest4</servlet-name>
+  	<url-pattern>/index7.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>login2</servlet-name> 
+  	<servlet-class>test.index8</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>login2</servlet-name>
+  	<url-pattern>/index8.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>addr</servlet-name> 
+  	<servlet-class>test.index10</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>addr</servlet-name>
+  	<url-pattern>/index10.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>addr2</servlet-name> 
+  	<servlet-class>test.index11</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>addr2</servlet-name>
+  	<url-pattern>/index11</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>num</servlet-name> 
+  	<servlet-class>test.app</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>num</servlet-name>
+  	<url-pattern>/app</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app> 

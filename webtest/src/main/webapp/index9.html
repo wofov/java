@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial=scale=1.0">
+<title>AJAX 3일차 (Jquery 중급문법) 확장함수</title>
+<script src="./jquery.js"></script>
+<script>//let 절대 중복되면 안됨.
+	var $c = "gd";
+	var qw = "하윤성"; //자바스크립트 전역변수
+	$(function() {
+		// var $qw = "하윤성"; //jQuery 전역변수 
+		$("#btn").click(function name() {
+			$.fn.abc();
+		});
+		function abc1() { 
+			console.log("test123");
+		}
+		abc11 = function ($c) {
+			console.log($c);
+		}
+		$.fn.abc = function() {
+			console.log("확장함수");
+			abc();
+			az();
+		}
+		fn_bbb = function(qw) {
+			console.log(qw);
+		}
+		function az() {
+			console.log("zs");
+		}
+	});
+	function abc() { //이거는 안됩니다.
+		console.log($c);
+		console.log("test");
+		fn_bbb(qw); 
+		//abc1(); // 이 형태는 안됨.
+		abc11($c); // 이놈은 됨 
+	}
+	//abc1();
+	$.fn.a = function() {
+			console.log("커리아님");
+			
+		}
+		
+</script>
+</head>
+<body>
+<input type="button" value="버튼" onclick="abc()">
+<!-- jQuery안에 Javascript 함수는 호출하지 못함.  -->
+<input type="button" id="btn">
+<input type="button" value="test3" onclick="$.fn.abc()">
+<input type="button" value="test4" onclick="$.fn.a()">
+</body>
+</html>

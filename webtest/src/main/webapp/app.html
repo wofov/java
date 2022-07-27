@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial=scale=1.0">
+<title>AJAX 3일차 (Jquery 중급문법) 응용문제</title>
+<script src="./jquery.js"></script>
+<script>
+	$(function() {
+		/*
+		사용자가 1~10까지 숫자 중 한가지를 선택합니다
+		해당 숫자를 app로 backend에게 ajax로 전달합니다.
+		backend는 1~10까지 중 무작위 숫자 하나를 뽑는다.
+		사용자가 입력한 숫자와 무작위 숫자가 같을 경우 당첨
+		다를 경우 다음 기회에 라고 app.html로 return해줍니다. 
+		*/
+		$("#btn").click(function() {
+			var $mid = $("#mid").val();
+			
+			$.ajax({
+				url:"./app",
+				data:{mid:$mid},
+				catch:false,
+				type:"GET",
+				success: function(data) {
+					console.log(data);
+				},
+				error: function() {
+					
+				}
+				
+			});
+			
+			
+			
+		});
+		
+		
+		
+		
+	});
+</script>
+</head>
+<body>
+
+
+<input type="text" id="mid" >
+<input type="button" value="결과확인" id="btn">
+
+</body>
+</html>

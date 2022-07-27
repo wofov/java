@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial=scale=1.0">
+<title>AJAX 3일차 (Jquery 중급문법) 확장함수2 상속 + api 연동</title>
+<script src="./jquery.js"></script>
+<script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
+<script>
+//backend : jquery 핸들링,ajax,setter,getter 함수, api 연동
+// - data전송, 통신 
+	$(function () {
+		$("#address_btn").postcodifyPopUp({//도로명 주소 api
+			insertPostcode5 : "#addr" ,
+			insertAddress : "#addr2"
+		});
+		
+		
+		
+		
+		
+		$("#btn").click(function () {
+			var $a = "홍길";
+			$.box1($a);
+		});
+		
+		$.fn.abc = function () {//getter
+			var $b = 10;
+			return $b;
+		}
+		console.log($.fn.abc());
+		
+		$.extend({ //상속 함수를 모아놓은 그룹을 extend
+			box1: function (aa) {//setter
+				console.log(aa);
+			},
+			box2: function () {
+				console.log("bo2");
+			}
+		});
+		
+		$.box2();		
+		
+		
+		$("#f").submit(function() {
+			this.method ="POST";
+			this.action ="./index10.do";
+			this.enctype ="application/x-www-form-urlencoded";
+			this.submit();
+		});
+		
+	});
+	
+</script>
+</head>
+
+<body>
+<input type="button" id="btn" value="아.."><br><br><br><br><br>
+<form name="f" id="f">
+<input type="text" name="addr" id="addr" maxLength="5" readonly><br><br>
+<input type="text" name="addr2" id="addr2" readonly style="width:300px;"><br><br>
+<input type="text" name="addr3" id="addr3" style="width:300px;" placeholder="상세주소 입력"><br><br>
+<input type="button" value="주소검색" id="address_btn">
+<input type="submit" value="회원가입"> 
+</form>
+</body>
+
+
+</html>
+
+
+
+
+

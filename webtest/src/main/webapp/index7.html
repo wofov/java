@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial=scale=1.0">
+<title>AJAX 3일차 (Jquery 중급문법) form, location</title>
+<script src="./jquery.js"></script>
+<script>
+	$(function () {
+		$("#login").click(function() {
+			//location.href="index5.do?user=hong";
+			var $u1 = $("#mid").val();
+			var $u2 = $("#mpass").val();
+			if($u1==""){
+				alert("고객명 입력");
+			}
+			else if($u2==""){
+				alert("pw입력하세요");
+			}
+			else{
+				location.href="./index7.do?u1="+$u1+"&u2="+$u2;
+			}	
+			
+		});			
+		
+	});
+</script>
+</head>
+<body>
+<input type="text" id="mid" value="">
+<input type="password" id="mpass" value="">
+<input type="button" value="로그인" id="login">
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial=scale=1.0">
+<title>AJAX 3일차 (Jquery 중급문법) form, submit + post</title>
+<script src="./jquery.js"></script>
+<script>
+	$(function() {//jQuery는 id, class를 사용합니다.
+		
+		$("#f").submit(function() {//submit form id를 적용해야만 합니다. 
+			var $m = $("#mid").val();
+			if($m==""){
+				alert("아이디를 입력하세요");
+				return false;
+			}
+			else{
+				//$(this).submit();
+				//return true;
+				return;
+			}
+		});
+		
+	});
+	//javacript name, id
+</script>
+</head>
+<body>
+<form name="f" id="f" method="post" action="index8.do">
+<!-- submit에서 get안됨 -->
+<input type="text" name="mid" id="mid">
+<input type="submit" value="전송">
+</form>
+</body>
+
+
+
+</html>
+
+
+
+
+
