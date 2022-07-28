@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial=scale=1.0">
+<title>jquery 2일차 - ajax post</title>
+<script src="./js/jquery.js"></script>
+<script src="./js/jquery-ui.js?v=3"></script>
+<link rel="stylesheet" type="text/css" href="./js/jquery-ui.css">
+<script>
+	$(function() {
+		$("#btn").click(function() {
+			var $s = $("#username").val();
+			if($s==""){
+				alert("사용자 이름을 입력하세요");
+			}
+			else{
+				$.fn.getdate($s);
+			}
+			
+		});
+		
+	});
+	$.fn.getdate = function ($sdate) {
+		$.ajax({
+			url:"./test2.do",
+			data:{sdate:$sdate},
+			catch:false,
+			method:"post",
+			dataType:"text",
+			success: function($data) {
+				if($data!="error"){
+					var $parse = JSON.parse($data);
+					console.log($parse);
+					console.log($parse["list"][0]);
+					//console.log($data);
+				}
+				else{
+					alert("해당사용자가 아닙니다.");
+				}
+			},
+			error: function name() {
+				console.log("통신오류");
+			}
+				
+		});
+			
+	}
+</script>
+</head>
+<body>
+<input type="text" id="username" class="ui-widget">
+<input type="button" value="검색" id="btn" class="ui-button">
+</body>
+</html>
