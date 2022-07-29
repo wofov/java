@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<title>ajax 복습6 - 실시간 데이터 변경</title>
+<script src="./js/jquery.js"></script>
+<script>
+	$(function name() {
+		/*//setTimeout - 지속성 형태로 구성하는 방식
+		$.fn.aaa = function () {
+			console.log("test");
+			setTimeout($.fn.aaa,1000);
+		}
+		*/
+		
+		//setTimeout($.fn.aaa,1000); //1회성
+		//setInterval($.fn.aaa,1000); //지속적
+		
+		//응용파트
+		/*
+		$.fn.bbb= function () {
+			$("#dataview").html("test");	
+			setTimeout($.fn.bbb,2000);
+		}
+		setTimeout($.fn.bbb,2000);
+		*/
+			var $num = 0;
+		$.fn.ccc = function () {
+			$.ajax({
+				url:"./ex6.do",
+				method:"GET",
+				dataType:"html",
+				cache:false,
+				data:{num:$num},
+				success: function ($data) {
+					console.log($data);
+					$("#dataview").html($data);
+				},
+				error: function () {
+					console.log("통신오류");
+				}
+			});
+				$num++;
+				if($num>3){
+					$num=0;
+				}
+			setTimeout($.fn.ccc,3000);
+		}
+		setTimeout($.fn.ccc,0);
+		
+	});
+</script>
+</head>
+<body>
+<div id="dataview"></div>
+</body>
+</html>

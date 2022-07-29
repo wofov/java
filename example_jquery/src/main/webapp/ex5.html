@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<title>ajax 복습5 - post</title>
+<script src="./js/jquery.js"></script>
+<script>
+	$(function () {
+		$("#toemail").click(function() {
+			var $email = $("#email1").val()+"@"+$("#email2").val();
+			//console.log($email);
+			$.fn.ajaxpost($email);
+		});
+		$.fn.ajaxpost = function($email) {
+			$.ajax({
+				url:"./ex5.do",
+				data:{email:$email},
+				method:"post",
+				cache:false,
+				dataType:"html",
+				contentType:"application/x-www-form-urlencoded",
+				success: function ($data) {
+					console.log($data);
+					if($data==null || $data=="error"){
+						console.log("올바른 이메일 주소가 아닙니다.");
+					}
+					else{
+						alert("해당 이메일 주소로 보안코드를 보냈습니다");
+					}
+				},
+				error: function () {
+					console.log("통신오류");
+				}			
+			});
+		}
+	});
+
+	function toemail() {
+		var email = document.getElementById("email1").value+
+			"@"+document.getElementById("email2").value;
+		if(email==null||email==""){
+			alert("올바른 형식이 아닙니다.");
+		}
+		else{
+			ajax(email);
+		}
+		
+	}
+		function ajax(e) {
+			let da;
+			
+			function wck() {		
+				if(window.XMLHttpRequest){
+					return new XMLHttpRequest;
+				};
+			}
+			function fg() {
+				if(da.readyState == XMLHttpRequest.DONE && da.status==200){
+					if(this.response=="ok"){
+						alert("이메일로 보안코드가 발송 되었습니다.");
+					}
+					else{
+						console.log("error");
+					}
+				}
+					else if(da.status==404){
+						console.log("에러");
+					}
+			}
+			var dd = "email="+e;
+			console.log(dd);
+		da=wck();
+		da.onreadystatechange = fg;
+		da.open("POST","./ex5.do",true);
+		da.setRequestHeader("content-type","application/x-www-form-urlencoded");
+		da.send(dd);
+		//post는 암호화 중요해서 코드를 꼭 때려야 한다.
+		//application/x-www-form-urlencoded
+		}
+		
+	
+</script>
+</head>
+<body>
+<input type="text" name="email1" id="email1">@<input type="text" name="email2" id="email2">
+<br><input type="button" value="이메일인증.js" onclick="toemail()">
+<br><input type="button" value="이메일인증.jq" id=toemail>
+</body>
+</html> 

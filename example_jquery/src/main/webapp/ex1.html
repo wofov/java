@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-UA-compatible" content="ie=edge, chrome=1">
+<title>ajax 복습1</title>
+<script src="./js/jquery.js"></script>
+<script>
+	$(function () {
+		$("#data_post").click(function () {
+			var $a = $("#data").val();
+			var $b = $("#data2").val();
+			var $c = $("#data3").val();
+			location.href='./ex1.do?cal='+$a+'&cal2='+$b+'&job=' + $c;
+			//location은 java 파일로 보내면 끝 
+			//즉 java 파일에서 sysout으로 출력 해야 한다. 
+			//location은 name값이 필요 없다. 
+		});		
+		
+	});
+	function data_post() {
+		var a = document.getElementById("data").value;
+		var b = document.getElementById("data2").value;
+		var c = document.getElementById("data3").value;
+		location.href='./ex1.do?cal='+a+'&cal2='+b +'&job=' +c;
+	}
+	
+</script>
+</head>
+<body>
+<!-- backend : cal 파라미터 값 전송 -->
+<input type="text" id="data">
+<input type="text" id="data2">
+<br> <br> 
+<!-- 
+응용문제 
+직업군을 선택하여 location으로 전달하는 형태
+직업 : 학생,주부,회사원,프로그래머,기타 등 값 전송 하여
+출력파트
+선택하신 직업군은 ~~입니다. 
+ -->
+ 
+ <select id="data3">
+ 	<option value="">직업을 선택하세요</option>
+ 	<option value="학생">학생</option>
+ 	<option value="주부">주부</option>
+ 	<option value="회사원">회사원</option>
+ 	<option value="프로그래머">프로그래머</option>
+ 	<option value="기타">기타</option>
+ </select>
+ <input type="button" value="js" onclick="data_post()">
+ <input type="button" value="jq" id="data_post">
+
+ 
+</body> 
+
+
+</html>
